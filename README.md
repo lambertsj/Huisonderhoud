@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/icoon.png" width="128" alt="Het icoon van Huisonderhoud: een stempel met een vinkje"></p>
+
 # Huisonderhoud
 
 Weet altijd wat er aan je huis moet gebeuren, voordat het een probleem wordt.

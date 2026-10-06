@@ -35,3 +35,7 @@ xcrun altool --upload-app -f export/Huisonderhoud.ipa -t ios --apiKey <ID> --api
 ```
 
 Sleutels staan nooit in de repository. Verhoog `CURRENT_PROJECT_VERSION` in `project.yml` voor elke nieuwe upload.
+
+## GitHub
+
+`github-social-preview.png` (1280 x 640) is de afbeelding die verschijnt als je de repo-link deelt. GitHub laat die alleen via de webinterface instellen: Settings > General > Social preview > Upload an image.
