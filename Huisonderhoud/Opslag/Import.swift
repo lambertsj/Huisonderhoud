@@ -75,6 +75,7 @@ enum Import {
                 t.catalogusID = d.catalogusID; t.eigenTitel = d.eigenTitel; t.eigenUitleg = d.eigenUitleg
                 t.eigenCategorie = d.eigenCategorie; t.eigenWaarschuwing = d.eigenWaarschuwing
                 t.eigenUitvoering = d.eigenUitvoering; t.eigenDuurMin = d.eigenDuurMin
+                t.laatsteIntervalMaanden = d.laatsteIntervalMaanden; t.laatsteVoorkeursMaanden = d.laatsteVoorkeursMaanden
                 t.intervalMaanden = d.intervalMaanden; t.voorkeursMaanden = d.voorkeursMaanden
                 t.volgendeDatum = d.volgendeDatum; t.isActief = d.isActief; t.herinneringAan = d.herinneringAan
             }

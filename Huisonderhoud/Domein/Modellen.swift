@@ -55,6 +55,10 @@ final class Taak {
     var eigenWaarschuwing: String?
     var eigenUitvoering: String = UitvoeringSoort.zelf.rawValue
     var eigenDuurMin: Int?
+    /// Laatst bekende interval en voorkeursmaanden uit de catalogus. Alleen een terugval:
+    /// verdwijnt de taak uit de catalogus, dan blijft hij zo met dezelfde regels bestaan.
+    var laatsteIntervalMaanden: Int?
+    var laatsteVoorkeursMaanden: [Int] = []
     var intervalMaanden: Int?
     /// Voor eigen taken, of als override van de catalogus.
     var voorkeursMaanden: [Int] = []
@@ -87,6 +91,8 @@ final class Taak {
         eigenWaarschuwing = catalogus.waarschuwing
         eigenUitvoering = catalogus.uitvoering.rawValue
         eigenDuurMin = catalogus.duurMin
+        laatsteIntervalMaanden = catalogus.intervalMaanden
+        laatsteVoorkeursMaanden = catalogus.maanden
     }
 
     var alleUitvoeringen: [Uitvoering] { uitvoeringen ?? [] }

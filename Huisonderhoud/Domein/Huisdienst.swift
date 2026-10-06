@@ -49,6 +49,94 @@ final class Huisdienst {
         try? context.save()
     }
 
+    // MARK: Catalogus bijhouden
+
+    /// Houdt de taken in lijn met de gebundelde catalogus, zonder iets weg te halen:
+    /// - taken uit de catalogus bewaren de laatst bekende tekst en regels;
+    /// - verdwijnt een taak uit de catalogus, dan wordt het een eigen taak met die tekst.
+    /// Nieuwe taken worden hier nooit toegevoegd; dat gaat via `Voorstellen`.
+    func synchroniseer(woning: Woning, context: ModelContext) {
+        var gewijzigd = false
+        for taak in woning.alleTaken {
+            guard let id = taak.catalogusID else { continue }
+            if let cat = catalogus.taak(met: id) {
+                func zet<T: Equatable>(_ pad: ReferenceWritableKeyPath<Taak, T>, _ waarde: T) {
+                    if taak[keyPath: pad] != waarde { taak[keyPath: pad] = waarde; gewijzigd = true }
+                }
+                zet(\.eigenTitel, cat.titel)
+                zet(\.eigenUitleg, cat.uitleg)
+                zet(\.eigenCategorie, cat.categorie)
+                zet(\.eigenWaarschuwing, cat.waarschuwing)
+                zet(\.eigenUitvoering, cat.uitvoering.rawValue)
+                zet(\.eigenDuurMin, cat.duurMin)
+                zet(\.laatsteIntervalMaanden, cat.intervalMaanden)
+                zet(\.laatsteVoorkeursMaanden, cat.maanden)
+            } else {
+                taak.catalogusID = nil
+                if taak.intervalMaanden == nil { taak.intervalMaanden = taak.laatsteIntervalMaanden }
+                if taak.voorkeursMaanden.isEmpty { taak.voorkeursMaanden = taak.laatsteVoorkeursMaanden }
+                gewijzigd = true
+            }
+        }
+        if Voorstellen.bepaal(catalogus: catalogus, woning: woning).isLeeg, woning.catalogusVersie != catalogus.versie {
+            woning.catalogusVersie = catalogus.versie
+            gewijzigd = true
+        }
+        if gewijzigd { try? context.save() }
+    }
+
+    func voorstellen(voor woning: Woning) -> Voorstellen {
+        Voorstellen.bepaal(catalogus: catalogus, woning: woning)
+    }
+
+    /// Past de keuze van de gebruiker toe.
+    /// - Parameters:
+    ///   - toevoegen: catalogus-id's die actief worden toegevoegd.
+    ///   - uitgezet: catalogus-id's die wel een taak krijgen, maar uitgezet (zo blijven ze vindbaar).
+    ///   - deactiveren: taken die uit gaan.
+    ///   - behouden: taken die blijven staan; het voorstel komt niet terug.
+    func pasVoorstellenToe(woning: Woning, toevoegen: Set<String>, uitgezet: Set<String>, deactiveren: [Taak],
+                           behouden: [Taak], context: ModelContext, nu: Date = Date()) {
+        let gekozen = toevoegen.union(uitgezet)
+        if !gekozen.isEmpty {
+            let items = EersteSchema.maak(catalogus: catalogus, kenmerken: woning.kenmerken, nu: nu, planning: planning)
+            let datums = Dictionary(items.map { ($0.catalogusID, $0.volgendeDatum) }, uniquingKeysWith: { eerste, _ in eerste })
+            for id in gekozen {
+                guard let cat = catalogus.taak(met: id) else { continue }
+                let taak = Taak(catalogus: cat, volgendeDatum: datums[id], woning: woning)
+                taak.isActief = toevoegen.contains(id)
+                context.insert(taak)
+            }
+        }
+        for taak in deactiveren { taak.isActief = false }
+        for taak in behouden {
+            if let id = taak.catalogusID, !woning.negeerVoorstellen.contains(id) { woning.negeerVoorstellen.append(id) }
+        }
+        if voorstellen(voor: woning).isLeeg { woning.catalogusVersie = catalogus.versie }
+        try? context.save()
+    }
+
+    // MARK: Eigen taken
+
+    @discardableResult
+    func maakEigenTaak(woning: Woning, titel: String, uitleg: String, categorie: String, intervalMaanden: Int?,
+                       uitvoering: UitvoeringSoort, eersteDatum: Date, context: ModelContext) -> Taak {
+        let taak = Taak(eigenTitel: titel.trimmingCharacters(in: .whitespacesAndNewlines),
+                        eigenUitleg: uitleg.trimmingCharacters(in: .whitespacesAndNewlines),
+                        eigenCategorie: categorie, intervalMaanden: intervalMaanden,
+                        volgendeDatum: planning.kalender.startOfDay(for: eersteDatum), woning: woning)
+        taak.eigenUitvoering = uitvoering.rawValue
+        context.insert(taak)
+        try? context.save()
+        return taak
+    }
+
+    func verwijder(_ taak: Taak, context: ModelContext) {
+        guard taak.catalogusID == nil else { return }
+        context.delete(taak)
+        try? context.save()
+    }
+
     // MARK: Afvinken
 
     /// Standaard uitvoerder bij het afvinken: `zelf_of_vakman` wordt `zelf`.

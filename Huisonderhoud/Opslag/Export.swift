@@ -40,6 +40,8 @@ struct Export: Codable, Equatable {
         var eigenWaarschuwing: String?
         var eigenUitvoering: String
         var eigenDuurMin: Int?
+        var laatsteIntervalMaanden: Int?
+        var laatsteVoorkeursMaanden: [Int]
         var intervalMaanden: Int?
         var voorkeursMaanden: [Int]
         var volgendeDatum: Date?
@@ -108,6 +110,7 @@ struct Export: Codable, Equatable {
                 TaakDTO(id: $0.id, woningID: $0.woning?.id, apparaatID: $0.apparaat?.id, catalogusID: $0.catalogusID,
                         eigenTitel: $0.eigenTitel, eigenUitleg: $0.eigenUitleg, eigenCategorie: $0.eigenCategorie,
                         eigenWaarschuwing: $0.eigenWaarschuwing, eigenUitvoering: $0.eigenUitvoering, eigenDuurMin: $0.eigenDuurMin,
+                        laatsteIntervalMaanden: $0.laatsteIntervalMaanden, laatsteVoorkeursMaanden: $0.laatsteVoorkeursMaanden,
                         intervalMaanden: $0.intervalMaanden, voorkeursMaanden: $0.voorkeursMaanden, volgendeDatum: sec($0.volgendeDatum),
                         isActief: $0.isActief, herinneringAan: $0.herinneringAan)
             },

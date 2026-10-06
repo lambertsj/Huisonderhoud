@@ -12,13 +12,15 @@ struct TaakRijLink: View {
         let inhoud = taak.inhoud(in: dienst.catalogus)
         let tijd = nu()
         let status = taak.status(in: dienst.catalogus, planning: dienst.planning, nu: tijd)
+        let wanneer = taak.isActief
+            ? Wanneertekst.maak(status: status, datum: taak.volgendeDatum, voorkeursMaanden: inhoud.voorkeursMaanden,
+                                nu: tijd, kalender: dienst.planning.kalender)
+            : "Uitgezet"
         NavigationLink(value: taak) {
             TaakRij(
                 titel: inhoud.titel,
-                status: status,
-                wanneer: Wanneertekst.maak(status: status, datum: taak.volgendeDatum,
-                                           voorkeursMaanden: inhoud.voorkeursMaanden, nu: tijd,
-                                           kalender: dienst.planning.kalender),
+                status: taak.isActief ? status : .later,
+                wanneer: wanneer,
                 uitvoering: inhoud.uitvoering,
                 duur: inhoud.duurMin)
         }

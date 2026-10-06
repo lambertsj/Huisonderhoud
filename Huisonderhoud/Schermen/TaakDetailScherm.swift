@@ -17,6 +17,8 @@ struct TaakDetailScherm: View {
     @State private var fotos: [Data] = []
     @State private var gekozenFotos: [PhotosPickerItem] = []
     @State private var afgevinkt: Uitvoering?
+    @State private var bewerken = false
+    @State private var verwijderen = false
 
     var body: some View {
         let inhoud = taak.inhoud(in: dienst.catalogus)
@@ -81,6 +83,21 @@ struct TaakDetailScherm: View {
             ToolbarItem(placement: .topBarTrailing) { menu }
         }
         .onChange(of: gekozenFotos) { _, nieuw in laadFotos(nieuw) }
+        .navigationDestination(isPresented: $bewerken) {
+            if let woning = taak.woning { EigenTaakScherm(woning: woning, taak: taak) }
+        }
+        .confirmationDialog("Deze taak verwijderen?", isPresented: $verwijderen, titleVisibility: .visible) {
+            Button("Verwijderen", role: .destructive) {
+                let woning = taak.woning
+                dienst.verwijder(taak, context: context)
+                let taken = woning?.alleTaken ?? []
+                Task { await dienst.herplanMeldingen(taken: taken) }
+                dismiss()
+            }
+            Button("Annuleren", role: .cancel) {}
+        } message: {
+            Text("Wat je er al mee hebt afgevinkt blijft in het Boekje staan.")
+        }
     }
 
     // MARK: Onderdelen
@@ -120,6 +137,10 @@ struct TaakDetailScherm: View {
                     dienst.zetActief(true, voor: taak, nu: nu(), context: context)
                     herplan()
                 }
+            }
+            if taak.catalogusID == nil {
+                Button("Taak bewerken") { bewerken = true }
+                Button("Taak verwijderen", role: .destructive) { verwijderen = true }
             }
             Button(taak.herinneringAan ? "Herinnering uitzetten" : "Herinnering aanzetten") {
                 taak.herinneringAan.toggle()

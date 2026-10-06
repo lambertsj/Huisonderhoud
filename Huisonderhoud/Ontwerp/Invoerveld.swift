@@ -110,3 +110,82 @@ struct OptioneleDatum: View {
         }
     }
 }
+
+/// Keuze uit een lijst in een menu, vormgegeven als invoerveld met het label erboven.
+struct Keuzemenu<Waarde: Hashable>: View {
+    let label: String
+    let opties: [(waarde: Waarde, titel: String)]
+    @Binding var keuze: Waarde
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: Ruimte.s) {
+            Text(label)
+                .tekststijl(.taak)
+                .foregroundStyle(Color.ink)
+            Menu {
+                ForEach(opties, id: \.waarde) { optie in
+                    Button(optie.titel) { keuze = optie.waarde }
+                }
+            } label: {
+                HStack {
+                    Text(opties.first { $0.waarde == keuze }?.titel ?? "")
+                        .tekststijl(.body)
+                        .foregroundStyle(Color.ink)
+                        .multilineTextAlignment(.leading)
+                    Spacer(minLength: Ruimte.s)
+                    Image(systemName: "chevron.up.chevron.down")
+                        .font(.system(size: 14))
+                        .foregroundStyle(Color.inkMuted)
+                        .accessibilityHidden(true)
+                }
+                .padding(Ruimte.m)
+                .frame(maxWidth: .infinity, minHeight: Ruimte.knopHoogte, alignment: .leading)
+                .background(Color.surfaceRaised)
+                .clipShape(RoundedRectangle(cornerRadius: Hoek.knop))
+                .overlay(RoundedRectangle(cornerRadius: Hoek.knop).strokeBorder(Color.lineStrong, lineWidth: 1.5))
+                .contentShape(RoundedRectangle(cornerRadius: Hoek.knop))
+            }
+            .accessibilityLabel(label)
+            .accessibilityValue(opties.first { $0.waarde == keuze }?.titel ?? "")
+        }
+    }
+}
+
+/// Zoekveld bovenaan een lijst.
+struct Zoekveld: View {
+    @Binding var tekst: String
+    @FocusState private var focus: Bool
+
+    var body: some View {
+        HStack(spacing: Ruimte.s) {
+            TextField("", text: $tekst, prompt: Text("Zoeken").foregroundStyle(Color.inkMuted))
+                .tekststijl(.body)
+                .foregroundStyle(Color.ink)
+                .focused($focus)
+                .submitLabel(.search)
+                .textInputAutocapitalization(.never)
+                .autocorrectionDisabled()
+                .accessibilityLabel("Zoeken in taken")
+            if !tekst.isEmpty {
+                Button {
+                    tekst = ""
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundStyle(Color.inkMuted)
+                        .frame(width: Ruimte.aanraakminimum, height: Ruimte.aanraakminimum)
+                        .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Zoekopdracht wissen")
+            }
+        }
+        .padding(.horizontal, Ruimte.m)
+        .frame(minHeight: Ruimte.knopHoogte)
+        .background(Color.surfaceRaised)
+        .clipShape(RoundedRectangle(cornerRadius: Hoek.knop))
+        .overlay(
+            RoundedRectangle(cornerRadius: Hoek.knop)
+                .strokeBorder(focus ? Color.brand : Color.lineStrong, lineWidth: focus ? 2 : 1.5)
+        )
+    }
+}

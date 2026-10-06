@@ -27,7 +27,8 @@ extension Taak {
         return TaakInhoud(
             titel: eigenTitel, uitleg: eigenUitleg, categorie: eigenCategorie,
             waarschuwing: eigenWaarschuwing, uitvoering: UitvoeringSoort(rawValue: eigenUitvoering) ?? .zelf,
-            duurMin: eigenDuurMin, intervalMaanden: intervalMaanden, voorkeursMaanden: voorkeursMaanden,
+            duurMin: eigenDuurMin, intervalMaanden: intervalMaanden ?? laatsteIntervalMaanden,
+            voorkeursMaanden: voorkeursMaanden.isEmpty ? laatsteVoorkeursMaanden : voorkeursMaanden,
             isEigen: true)
     }
 }

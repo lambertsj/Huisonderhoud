@@ -20,6 +20,8 @@ struct HuisScherm: View {
                 Schermkop(titel: "Huis")
 
                 if let woning = woningen.first {
+                    VoorstelMelding(woning: woning)
+
                     Groep(kop: "Woning") {
                         NavigationLink {
                             ProfielScherm(woning: woning)

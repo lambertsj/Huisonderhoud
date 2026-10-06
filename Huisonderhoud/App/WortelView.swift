@@ -7,6 +7,7 @@ struct WortelView: View {
     @State private var onboardingBezig = false
 
     @Environment(Huisdienst.self) private var dienst
+    @Environment(\.modelContext) private var context
     @Environment(\.scenePhase) private var fase
 
     var body: some View {
@@ -20,6 +21,7 @@ struct WortelView: View {
         .tint(Color.brand)
         .task(id: fase) {
             guard fase == .active, !onboardingBezig else { return }
+            for woning in woningen { dienst.synchroniseer(woning: woning, context: context) }
             await dienst.herplanMeldingen(taken: woningen.flatMap(\.alleTaken))
         }
     }
