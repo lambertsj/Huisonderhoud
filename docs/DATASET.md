@@ -2,6 +2,8 @@
 
 `Huisonderhoud/Resources/onderhoudstaken.json` is de catalogus van onderhoudstaken. Hij zit als bundle-resource in de app, wordt bij het opstarten gelezen en is read-only. Een correctie komt bij iedereen aan via een app-update.
 
+Licentie: MIT, net als de rest van de repository.
+
 > Intervallen zijn algemene richtlijnen. Het voorschrift van de fabrikant of installateur gaat altijd voor.
 
 ## Schema
@@ -57,7 +59,7 @@ Verzin geen taken en geen onderhoudsregels. Twijfel je over een interval, schrij
 
 Dit zijn opmerkingen bij de startset; ze zijn bewust niet doorgevoerd in de code of in de dataset.
 
-1. **Status van de dataset.** `meta.status` zegt dat de startset nog gecontroleerd moet worden voordat hij in de app gaat. Dat is nog niet gebeurd.
+1. **Status van de dataset.** De startset is voor versie 1 van de app goedgekeurd (`meta.versie` 1.0).
 2. **Taken die twee keer per jaar bedoeld lijken.** Door het snappen naar voorkeursmaanden gedragen sommige taken zich als jaarlijks, ook als de maanden twee keer per jaar suggereren:
    - `dak-pannen-inspectie`: `interval_maanden: 12`, `maanden: [4, 10]`. Afgevinkt in april komt hij pas weer in april. Bedoeld je twee keer per jaar, gebruik dan `interval_maanden: 6`.
    - `tuin-bomen-snoeien`: `interval_maanden: 12`, `maanden: [2, 9]`. Zelfde patroon.

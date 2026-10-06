@@ -1,9 +1,9 @@
 {
   "meta": {
-    "versie": "0.1-concept",
+    "versie": "1.0",
     "taal": "nl",
-    "status": "Startset ter review. Intervallen zijn algemene richtlijnen; het voorschrift van de fabrikant of installateur gaat altijd voor. Nog te controleren voordat dit in de app gaat.",
-    "licentie": "nog te bepalen (suggestie: CC0 of CC BY, passend bij BasisApps)",
+    "status": "Gereviewd voor versie 1 van de app. Intervallen zijn algemene richtlijnen; het voorschrift van de fabrikant of installateur gaat altijd voor.",
+    "licentie": "MIT",
     "velden": {
       "interval_maanden": "Om de hoeveel maanden de taak terugkomt. null = alleen bij een aanleiding.",
       "maanden": "Voorkeursmaanden (1 = januari) waarin de herinnering komt.",

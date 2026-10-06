@@ -14,13 +14,11 @@ Wat Jeroen nog moet invullen of kiezen. Dit is geen backlog voor de app: de app 
 
 ## Licentie
 
-- [ ] `LICENSE` bevat al de MIT-licentie voor de code (aangemaakt bij de repository). Bevestig dat dit is wat je wilt.
-- [ ] **Licentie van `onderhoudstaken.json` kiezen.** Suggestie: CC0 of CC BY, passend bij BasisApps. In het bestand staat nu `"licentie": "nog te bepalen"` in `meta`; pas dat aan en noem het in README en `docs/DATASET.md`.
-- [ ] Controleer of de lettertypen in `Huisonderhoud/Resources/Fonts/` (met de OFL-teksten) zijn zoals je ze wilt. Schibsted Grotesk en Barlow Condensed komen uit de zips in de projectmap; alleen de zes gebruikte stijlen zijn meegenomen.
+- [x] Alles is MIT: `LICENSE` geldt voor de code en de dataset. De lettertypen behouden hun eigen OFL-licentie (teksten in `Huisonderhoud/Resources/Fonts/`).
 
 ## Inhoud
 
-- [ ] **De dataset reviewen.** `meta.status` zegt: "Startset ter review ... Nog te controleren voordat dit in de app gaat." Zie ook de voorstellen onderaan `docs/DATASET.md` (taken die twee keer per jaar lijken, `verwarming-cv-waterdruk`).
+- [x] Dataset goedgekeurd voor v1. De openstaande inhoudelijke voorstellen (taken die twee keer per jaar lijken) staan onderaan `docs/DATASET.md` voor een volgende versie.
 - [ ] **De vijf BasisApps-afspraken** op het scherm Huis > Over zijn geschreven vanuit de punten in de opdracht (gratis, reclamevrij, geen trackers en geen account, gegevens op je toestel, open source). Controleer de formulering tegen de afspraken op basisapps.nl.
 
 ## Links

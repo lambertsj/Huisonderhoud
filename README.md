@@ -63,4 +63,4 @@ De catalogus (de onderhoudstaken) is read-only en zit in de app. Alles wat jij a
 
 ## Licentie
 
-De code valt onder de MIT-licentie, zie [LICENSE](LICENSE). De licentie van de dataset is nog niet gekozen (zie [TODO.md](TODO.md)). De lettertypen Schibsted Grotesk en Barlow Condensed vallen onder de SIL Open Font License; de licentieteksten staan in `Huisonderhoud/Resources/Fonts/`.
+Alles in deze repository valt onder de MIT-licentie, zie [LICENSE](LICENSE): de code en ook de dataset (`onderhoudstaken.json`). De lettertypen Schibsted Grotesk en Barlow Condensed vallen onder hun eigen SIL Open Font License (die is niet te vervangen door MIT); de licentieteksten staan in `Huisonderhoud/Resources/Fonts/`.

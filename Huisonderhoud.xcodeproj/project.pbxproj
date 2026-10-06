@@ -512,16 +512,16 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					71697E72750A95F9F3893D5F = {
-						DevelopmentTeam = "";
+						DevelopmentTeam = XYLKXHWCCC;
 						ProvisioningStyle = Automatic;
 					};
 					B3FBF19E1461C3CF839A834C = {
-						DevelopmentTeam = "";
+						DevelopmentTeam = XYLKXHWCCC;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 71697E72750A95F9F3893D5F;
 					};
 					E9E38E33FA27852769FFB230 = {
-						DevelopmentTeam = "";
+						DevelopmentTeam = XYLKXHWCCC;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -714,7 +714,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = XYLKXHWCCC;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -773,7 +773,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = XYLKXHWCCC;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
