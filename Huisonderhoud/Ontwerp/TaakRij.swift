@@ -59,6 +59,7 @@ struct TaakRij: View {
                 .tekststijl(.klein)
                 .foregroundStyle(Color.inkMuted)
                 .multilineTextAlignment(.trailing)
+                .frame(maxWidth: typeSize.isAccessibilitySize ? .infinity : 120, alignment: typeSize.isAccessibilitySize ? .leading : .trailing)
         }
     }
 

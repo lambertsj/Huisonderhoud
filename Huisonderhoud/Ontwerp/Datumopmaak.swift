@@ -24,6 +24,16 @@ enum Datumopmaak {
         return tekst.prefix(1).uppercased() + tekst.dropFirst()
     }
 
+    /// "14 okt"
+    static func korteDag(_ datum: Date, kalender: Calendar = .current) -> String {
+        let f = DateFormatter()
+        f.locale = locale
+        f.calendar = kalender
+        f.timeZone = kalender.timeZone
+        f.dateFormat = "d MMM"
+        return f.string(from: datum).replacingOccurrences(of: ".", with: "")
+    }
+
     /// "oktober"
     static func maandnaam(_ maand: Int) -> String {
         let namen = ["januari", "februari", "maart", "april", "mei", "juni", "juli",

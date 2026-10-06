@@ -31,3 +31,9 @@ extension Taak {
             isEigen: true)
     }
 }
+
+extension Taak {
+    func status(in catalogus: Catalogus, planning: Planning, nu: Date) -> TaakStatus {
+        planning.status(volgendeDatum: volgendeDatum, voorkeursMaanden: inhoud(in: catalogus).voorkeursMaanden, nu: nu)
+    }
+}
