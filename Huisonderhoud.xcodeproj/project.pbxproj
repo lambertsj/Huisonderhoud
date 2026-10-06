@@ -20,6 +20,7 @@
 		47F907074764D658111B9F52 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EF5D2C92BA4BBBC90B9CD0AE /* Localizable.xcstrings */; };
 		49C4B0933A23EA247A0BF047 /* Typografie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609C1FECDA337843AC4B48B9 /* Typografie.swift */; };
 		4DAAB000C2844855C79F18CA /* Catalogus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918D43B0C2C8ADC3F9B1C981 /* Catalogus.swift */; };
+		4FB65F399CE9C3A3E82E87BB /* BoekjeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5261489592A626218846D40A /* BoekjeTests.swift */; };
 		50ACB03BBB65FDB36C465970 /* Stempel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7973D010D8FF7525F0AF61E1 /* Stempel.swift */; };
 		56A595B44468F571E16FA1D5 /* HuisonderhoudApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BA48D534231E4ADC5E71D /* HuisonderhoudApp.swift */; };
 		5C75C3A423B750DD1754B445 /* Scherm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49FEA66D21062C3B2FE0D9F /* Scherm.swift */; };
@@ -28,15 +29,18 @@
 		667C023E3F4523A2BFBA3FDA /* Waarschuwing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399E7F968A48B9A4860DD3CD /* Waarschuwing.swift */; };
 		67065C008495722896E8ACA2 /* SchibstedGrotesk-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8359EFB41CD8C0EA6D438F8 /* SchibstedGrotesk-Medium.ttf */; };
 		684C66EA71BB49705749862D /* Kleur.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC807958604D8DF9A9189F2F /* Kleur.swift */; };
+		6B934765649E5C0512936386 /* DossierInhoud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E32848BE274E2D569D764E6 /* DossierInhoud.swift */; };
 		6CF2B69FE184A6572DE30C30 /* NuScherm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5BA65C6A5C18C22BCABE43 /* NuScherm.swift */; };
 		727B7E60FC2C6CCE492EF888 /* Knop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C50BD8AD278F7A0B6CA896 /* Knop.swift */; };
 		8195F0B5CFAF6AC75FBD6F9C /* Kenmerken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AAA1FBC40C275BE7CAB8C2 /* Kenmerken.swift */; };
 		8322D60E53DE4BE35D3FA75F /* Huisdienst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4189B2D9324D46695B0221F6 /* Huisdienst.swift */; };
+		837C24D5F1FCD4225FED5E16 /* DossierPDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719C3BD34F5CD0E9B73B96E0 /* DossierPDF.swift */; };
 		86FCC8C2B15746E5030C09DD /* BarlowCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E55710980785A97C0625B2F /* BarlowCondensed-SemiBold.ttf */; };
 		8812FD4ABAAFF5F6D0CD5D89 /* BarlowCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0950C2CFCE347636CFB5BCB1 /* BarlowCondensed-Bold.ttf */; };
 		8A77C8B88C725C45B5F6DED4 /* PlanningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A3149DD2F00D9FB2FA303 /* PlanningTests.swift */; };
 		8AC8DAF346A8670488E3F503 /* Datumopmaak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D38C91F4AA08E75CD2EF932 /* Datumopmaak.swift */; };
 		8DBAB78FD61A67DEA5A2C36B /* Voorbeeld.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9A1E99EDB8ADEBC39F0AF6 /* Voorbeeld.swift */; };
+		8E30C1BE20A27B889ECA3E65 /* BoekjeScherm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE61702068E676B2F9F2DC0 /* BoekjeScherm.swift */; };
 		903A7A148FE384B06B21F6AE /* TaakRij.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EA434401BC8BAC3F65FC87 /* TaakRij.swift */; };
 		904C144DBDD65CB161630D31 /* MeldingplannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7147AF3D5453BF45D5BB0 /* MeldingplannerTests.swift */; };
 		953D0AE3D39FB37B496CC629 /* EersteSchemaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5A6631F00B938B65E92A7 /* EersteSchemaTests.swift */; };
@@ -55,6 +59,7 @@
 		C1322FC23155CA9F4FB7FC32 /* TaakInhoud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B5F9DA9ADE1BBD37C2CEF /* TaakInhoud.swift */; };
 		C38D08270E91A912BA3B4349 /* OFL-BarlowCondensed.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9EB49353F7F9A7D2611CB779 /* OFL-BarlowCondensed.txt */; };
 		C4D834872346A31D23630E94 /* Vinkje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB9C9D566A92396F8C7496E /* Vinkje.swift */; };
+		CA50030A1E3B9CC7601FBC58 /* UitvoeringScherm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CE322CC1F93F97B0F1905 /* UitvoeringScherm.swift */; };
 		CBFF24CA97C03EF447FAED92 /* AfvinkenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885CE68573FE16266601E0C4 /* AfvinkenTests.swift */; };
 		CDFC31367557B630A66B12CB /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFCC5E65B8098AC7E9FE730 /* ModelTests.swift */; };
 		CE788FAE3452809986A83639 /* Invoerveld.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC73BE765AABF9210F4C923 /* Invoerveld.swift */; };
@@ -101,10 +106,13 @@
 		4BA13FDF709F7EA4AC02474B /* Omgeving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omgeving.swift; sourceTree = "<group>"; };
 		4F4D34D48F97B9E0DE7F355A /* Blad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blad.swift; sourceTree = "<group>"; };
 		4FA1A269CAE6148B9F9D4246 /* HuisonderhoudTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HuisonderhoudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FE61702068E676B2F9F2DC0 /* BoekjeScherm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoekjeScherm.swift; sourceTree = "<group>"; };
+		5261489592A626218846D40A /* BoekjeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoekjeTests.swift; sourceTree = "<group>"; };
 		568A3149DD2F00D9FB2FA303 /* PlanningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningTests.swift; sourceTree = "<group>"; };
 		5D38C91F4AA08E75CD2EF932 /* Datumopmaak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datumopmaak.swift; sourceTree = "<group>"; };
 		609C1FECDA337843AC4B48B9 /* Typografie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typografie.swift; sourceTree = "<group>"; };
 		6D5BA65C6A5C18C22BCABE43 /* NuScherm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuScherm.swift; sourceTree = "<group>"; };
+		719C3BD34F5CD0E9B73B96E0 /* DossierPDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DossierPDF.swift; sourceTree = "<group>"; };
 		76749D241375BFB465A6E9EC /* SchibstedGrotesk-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SchibstedGrotesk-Regular.ttf"; sourceTree = "<group>"; };
 		7973D010D8FF7525F0AF61E1 /* Stempel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stempel.swift; sourceTree = "<group>"; };
 		7BFCC5E65B8098AC7E9FE730 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
@@ -116,6 +124,7 @@
 		8790B941AE52C7D921B5700A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		87956C47A609B3502FF76A53 /* Ruimte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ruimte.swift; sourceTree = "<group>"; };
 		885CE68573FE16266601E0C4 /* AfvinkenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfvinkenTests.swift; sourceTree = "<group>"; };
+		8E32848BE274E2D569D764E6 /* DossierInhoud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DossierInhoud.swift; sourceTree = "<group>"; };
 		918D43B0C2C8ADC3F9B1C981 /* Catalogus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalogus.swift; sourceTree = "<group>"; };
 		96C7147AF3D5453BF45D5BB0 /* MeldingplannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeldingplannerTests.swift; sourceTree = "<group>"; };
 		9EB10E298D60C3C63E4E9F43 /* TypografieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypografieTests.swift; sourceTree = "<group>"; };
@@ -131,6 +140,7 @@
 		B5E73DC9854444053C00ECC4 /* Tabbalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbalk.swift; sourceTree = "<group>"; };
 		BA0A539A24BCAFCBD7B09473 /* HoofdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoofdView.swift; sourceTree = "<group>"; };
 		C4C50BD8AD278F7A0B6CA896 /* Knop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Knop.swift; sourceTree = "<group>"; };
+		CE9CE322CC1F93F97B0F1905 /* UitvoeringScherm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UitvoeringScherm.swift; sourceTree = "<group>"; };
 		D2FC1EEB99CA135D19BF4E44 /* Planning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planning.swift; sourceTree = "<group>"; };
 		D702C08B8C8EBF0A1E5B15A2 /* MeldingCentrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeldingCentrum.swift; sourceTree = "<group>"; };
 		DBCA6B9D797CBC8F228B5842 /* onderhoudstaken.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = onderhoudstaken.json; sourceTree = "<group>"; };
@@ -146,6 +156,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		04007145F459E65E3C214175 /* Boekje */ = {
+			isa = PBXGroup;
+			children = (
+				4FE61702068E676B2F9F2DC0 /* BoekjeScherm.swift */,
+				CE9CE322CC1F93F97B0F1905 /* UitvoeringScherm.swift */,
+			);
+			path = Boekje;
+			sourceTree = "<group>";
+		};
 		04D3E02F24F564BDCDC63E05 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +204,7 @@
 				2F2CEE056E380E2B0D9EEA79 /* TaakDetailScherm.swift */,
 				B5E73DC9854444053C00ECC4 /* Tabbalk.swift */,
 				AF9A1E99EDB8ADEBC39F0AF6 /* Voorbeeld.swift */,
+				04007145F459E65E3C214175 /* Boekje */,
 				81A7FA34A2AF953B2F6A02CE /* Nu */,
 				04D3E02F24F564BDCDC63E05 /* Onboarding */,
 			);
@@ -254,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				885CE68573FE16266601E0C4 /* AfvinkenTests.swift */,
+				5261489592A626218846D40A /* BoekjeTests.swift */,
 				23D1C48980BA452BF7605311 /* CatalogusTests.swift */,
 				0EE5A6631F00B938B65E92A7 /* EersteSchemaTests.swift */,
 				A7B4FA38E5E0F73946CAE533 /* HuisdienstTests.swift */,
@@ -275,6 +296,7 @@
 				B4EE88CA4E39CCB2D8EFE5E1 /* App */,
 				BD7F86A35C0A9D9AF9076AB9 /* Catalogus */,
 				4C1E97C34258B6550BA2A95F /* Domein */,
+				B2342D5D9F45EEA078A72748 /* Dossier */,
 				828E547FA3B375E9FF9426F1 /* Meldingen */,
 				0DA7D149371AA1402BE74693 /* Ontwerp */,
 				4514D74CDF60D2ED351BF607 /* Opslag */,
@@ -291,6 +313,15 @@
 				4FA1A269CAE6148B9F9D4246 /* HuisonderhoudTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B2342D5D9F45EEA078A72748 /* Dossier */ = {
+			isa = PBXGroup;
+			children = (
+				8E32848BE274E2D569D764E6 /* DossierInhoud.swift */,
+				719C3BD34F5CD0E9B73B96E0 /* DossierPDF.swift */,
+			);
+			path = Dossier;
 			sourceTree = "<group>";
 		};
 		B2D848FC9E836662DA114CAE /* Fonts */ = {
@@ -449,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBFF24CA97C03EF447FAED92 /* AfvinkenTests.swift in Sources */,
+				4FB65F399CE9C3A3E82E87BB /* BoekjeTests.swift in Sources */,
 				BB819DA2CB962C6AA60F8678 /* CatalogusTests.swift in Sources */,
 				953D0AE3D39FB37B496CC629 /* EersteSchemaTests.swift in Sources */,
 				F43F82051C04BA1B45597154 /* HuisdienstTests.swift in Sources */,
@@ -467,8 +499,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				099A60FCE380D363756E0FFC /* Blad.swift in Sources */,
+				8E30C1BE20A27B889ECA3E65 /* BoekjeScherm.swift in Sources */,
 				4DAAB000C2844855C79F18CA /* Catalogus.swift in Sources */,
 				8AC8DAF346A8670488E3F503 /* Datumopmaak.swift in Sources */,
+				6B934765649E5C0512936386 /* DossierInhoud.swift in Sources */,
+				837C24D5F1FCD4225FED5E16 /* DossierPDF.swift in Sources */,
 				EF77A134232CFE84A3AC9EF8 /* EersteSchema.swift in Sources */,
 				97D6F34603A852067AC4D903 /* Foto.swift in Sources */,
 				0455E8A24691242AB7A60134 /* Fotostrook.swift in Sources */,
@@ -498,6 +533,7 @@
 				CFD9B51E13A8E122C762DE31 /* Tabbalk.swift in Sources */,
 				0ED3371E657D6C9DF9180BB1 /* Types.swift in Sources */,
 				49C4B0933A23EA247A0BF047 /* Typografie.swift in Sources */,
+				CA50030A1E3B9CC7601FBC58 /* UitvoeringScherm.swift in Sources */,
 				C4D834872346A31D23630E94 /* Vinkje.swift in Sources */,
 				8DBAB78FD61A67DEA5A2C36B /* Voorbeeld.swift in Sources */,
 				667C023E3F4523A2BFBA3FDA /* Waarschuwing.swift in Sources */,

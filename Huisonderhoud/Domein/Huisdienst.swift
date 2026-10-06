@@ -79,6 +79,48 @@ final class Huisdienst {
         return uitvoering
     }
 
+    /// Na het wijzigen of verwijderen van een uitvoering: de volgende datum volgt de laatste uitvoering.
+    func herbereken(_ taak: Taak) {
+        guard let laatste = taak.laatsteUitvoering else { return }
+        let inhoud = taak.inhoud(in: catalogus)
+        taak.volgendeDatum = planning.volgendeDatum(
+            na: laatste.datum, intervalMaanden: inhoud.intervalMaanden, voorkeursMaanden: inhoud.voorkeursMaanden,
+            dagInMaand: Planning.spreidingsdag(voor: taak.catalogusID ?? taak.id.uuidString))
+    }
+
+    /// Slaat een bewerkte uitvoering op. `fotos` is de gewenste eindstand: bestaande bijlagen die er
+    /// niet meer in staan worden verwijderd, nieuwe (zonder bijlage) toegevoegd.
+    func bewerk(_ uitvoering: Uitvoering, datum: Date, uitvoerder: Uitvoerder, uitvoerderNaam: String,
+                notitie: String, fotos: [(Bijlage?, Data)], context: ModelContext) {
+        uitvoering.datum = datum
+        uitvoering.uitvoerder = uitvoerder
+        let naam = uitvoerderNaam.trimmingCharacters(in: .whitespacesAndNewlines)
+        uitvoering.uitvoerderNaam = (uitvoerder == .zelf || naam.isEmpty) ? nil : naam
+        uitvoering.notitie = notitie.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        let behouden = Set(fotos.compactMap { $0.0?.id })
+        for bijlage in uitvoering.alleBijlagen where bijlage.soort == .foto && !behouden.contains(bijlage.id) {
+            context.delete(bijlage)
+        }
+        for (bijlage, data) in fotos where bijlage == nil {
+            guard let verkleind = Fotoverkleiner.verklein(data) else { continue }
+            let nieuw = Bijlage(soort: .foto, data: verkleind)
+            context.insert(nieuw)
+            nieuw.uitvoering = uitvoering
+        }
+        try? context.save()
+        if let taak = uitvoering.taak { herbereken(taak) }
+        try? context.save()
+    }
+
+    func verwijder(_ uitvoering: Uitvoering, context: ModelContext) {
+        let taak = uitvoering.taak
+        context.delete(uitvoering)
+        try? context.save()
+        if let taak { herbereken(taak) }
+        try? context.save()
+    }
+
     func zetActief(_ actief: Bool, voor taak: Taak, nu: Date = Date(), context: ModelContext) {
         taak.isActief = actief
         // Een taak die weer aangaat en al lang te laat staat, komt niet meteen als achterstand terug.
