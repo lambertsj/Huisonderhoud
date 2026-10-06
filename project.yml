@@ -54,7 +54,8 @@ targets:
         CFBundleDevelopmentRegion: nl
         CFBundleLocalizations:
           - nl
-        UILaunchScreen: {}
+        UILaunchScreen:
+          UIColorName: surface
         UISupportedInterfaceOrientations:
           - UIInterfaceOrientationPortrait
         ITSAppUsesNonExemptEncryption: false
@@ -85,12 +86,29 @@ targets:
         TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Huisonderhoud.app/Huisonderhoud"
         BUNDLE_LOADER: "$(TEST_HOST)"
 
+  HuisonderhoudUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - HuisonderhoudUITests
+    dependencies:
+      - target: Huisonderhoud
+    settings:
+      base:
+        PRODUCT_NAME: HuisonderhoudUITests
+        PRODUCT_BUNDLE_IDENTIFIER: nl.basisapps.huisonderhoud.uitests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: Huisonderhoud
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/Frameworks @loader_path/Frameworks"
+
 schemes:
   Huisonderhoud:
     build:
       targets:
         Huisonderhoud: all
         HuisonderhoudTests: [test]
+        HuisonderhoudUITests: [test]
     test:
       targets:
         - HuisonderhoudTests
+        - HuisonderhoudUITests

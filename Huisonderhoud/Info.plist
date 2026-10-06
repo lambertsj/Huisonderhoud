@@ -36,7 +36,10 @@
 		<string>BarlowCondensed-Bold.ttf</string>
 	</array>
 	<key>UILaunchScreen</key>
-	<dict/>
+	<dict>
+		<key>UIColorName</key>
+		<string>surface</string>
+	</dict>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

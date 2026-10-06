@@ -27,15 +27,16 @@ struct WortelView: View {
     }
 }
 
-struct CatalogusFoutView: View {
-    let fout: Error
+/// Als de app niet kan starten: wat er is en wat je kunt doen. Je gegevens worden niet aangeraakt.
+struct StartfoutView: View {
+    let tekst: String
 
     var body: some View {
         Scherm {
-            Schermkop(titel: "Huisonderhoud",
-                      subregel: "De onderhoudstaken konden niet worden geladen. Installeer de app opnieuw of meld dit via de broncode. Er gaat niets verloren: je eigen gegevens blijven op je telefoon.",
+            Schermkop(titel: "Huisonderhoud start niet",
+                      subregel: "Je gegevens zijn niet gewijzigd. Sluit de app helemaal af en open hem opnieuw. Lukt dat niet, installeer de app dan opnieuw. Een export uit Huis kun je daarna importeren.",
                       subregelIsUitleg: true)
-            Text("\(String(describing: fout))")
+            Text(tekst)
                 .tekststijl(.klein)
                 .foregroundStyle(Color.inkMuted)
         }

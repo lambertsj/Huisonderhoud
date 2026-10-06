@@ -33,7 +33,7 @@ struct Tabbalk: View {
             .padding(.horizontal, Ruimte.s)
         }
         .background(Color.surfaceRaised.ignoresSafeArea(edges: .bottom))
-        .dynamicTypeSize(...DynamicTypeSize.accessibility1)
+        .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
         .accessibilityElement(children: .contain)
         .accessibilityLabel("Tabbalk")
     }

@@ -49,7 +49,14 @@ struct HuisScherm: View {
                             }
                             .buttonStyle(RijKnopStijl())
                         }
-                        if !apparaten.isEmpty { Haarlijn() }
+                        if apparaten.isEmpty {
+                            Text("Nog geen apparaten. Voeg bijvoorbeeld je cv-ketel toe, met merk, serienummer en een foto van het typeplaatje.")
+                                .tekststijl(.body)
+                                .foregroundStyle(Color.inkMuted)
+                                .padding(Ruimte.l)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                        Haarlijn()
                         NavigationLink {
                             ApparaatScherm(woning: woning, apparaat: nil)
                         } label: {

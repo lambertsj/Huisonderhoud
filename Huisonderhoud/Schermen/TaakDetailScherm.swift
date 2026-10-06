@@ -16,6 +16,7 @@ struct TaakDetailScherm: View {
     @State private var uitvoerder: Uitvoerder?
     @State private var fotos: [Data] = []
     @State private var gekozenFotos: [PhotosPickerItem] = []
+    @State private var fotoFout: String?
     @State private var afgevinkt: Uitvoering?
     @State private var bewerken = false
     @State private var verwijderen = false
@@ -118,6 +119,9 @@ struct TaakDetailScherm: View {
             PhotosPicker(selection: $gekozenFotos, maxSelectionCount: 5, matching: .images) {
                 Text("Foto toevoegen").knopOpmaak(.secundair)
             }
+            if let fotoFout {
+                Text(fotoFout).tekststijl(.klein).foregroundStyle(Color.ink)
+            }
 
             Button("Afvinken") { vinkAf() }
                 .buttonStyle(.primair)
@@ -178,12 +182,9 @@ struct TaakDetailScherm: View {
     private func laadFotos(_ items: [PhotosPickerItem]) {
         guard !items.isEmpty else { return }
         Task {
-            for item in items {
-                if let data = try? await item.loadTransferable(type: Data.self),
-                   let verkleind = Fotoverkleiner.verklein(data) {
-                    fotos.append(verkleind)
-                }
-            }
+            let resultaat = await Fotoverkleiner.laad(items)
+            fotos.append(contentsOf: resultaat.fotos)
+            fotoFout = Fotoverkleiner.foutTekst(mislukt: resultaat.mislukt)
             gekozenFotos = []
         }
     }

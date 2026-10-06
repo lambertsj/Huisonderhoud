@@ -1,3 +1,4 @@
+#if DEBUG
 import SwiftUI
 
 /// Alle ontwerpcomponenten op één scherm, voor previews.
@@ -41,3 +42,4 @@ struct Ontwerpgalerij: View {
 #Preview("Licht") { Ontwerpgalerij() }
 #Preview("Donker") { Ontwerpgalerij().preferredColorScheme(.dark) }
 #Preview("Grootste tekst") { Ontwerpgalerij().dynamicTypeSize(.accessibility5) }
+#endif

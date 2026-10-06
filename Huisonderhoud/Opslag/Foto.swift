@@ -1,5 +1,7 @@
 import Foundation
 import ImageIO
+import PhotosUI
+import SwiftUI
 import UniformTypeIdentifiers
 
 /// Foto's worden bij het opslaan verkleind: maximaal 2000 px lange zijde, JPEG ongeveer 0,8.
@@ -30,5 +32,29 @@ enum Fotoverkleiner {
               let b = eigenschappen[kCGImagePropertyPixelWidth] as? Int,
               let h = eigenschappen[kCGImagePropertyPixelHeight] as? Int else { return nil }
         return (b, h)
+    }
+}
+
+extension Fotoverkleiner {
+    /// Laadt en verkleint gekozen foto's. `mislukt` telt de foto's die niet te lezen waren.
+    static func laad(_ items: [PhotosPickerItem]) async -> (fotos: [Data], mislukt: Int) {
+        var fotos: [Data] = []
+        var mislukt = 0
+        for item in items {
+            if let data = try? await item.loadTransferable(type: Data.self), let verkleind = verklein(data) {
+                fotos.append(verkleind)
+            } else {
+                mislukt += 1
+            }
+        }
+        return (fotos, mislukt)
+    }
+
+    static func foutTekst(mislukt: Int) -> String? {
+        switch mislukt {
+        case 0: nil
+        case 1: "Die foto kon niet worden geladen. Kies een andere foto."
+        default: "\(mislukt) foto's konden niet worden geladen. Kies andere foto's."
+        }
     }
 }

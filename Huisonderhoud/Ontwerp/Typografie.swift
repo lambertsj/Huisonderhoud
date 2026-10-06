@@ -46,6 +46,22 @@ enum Tekststijl {
         Self.postScriptNaam(familie: spec.familie == .schibsted ? "schibsted" : "barlow", gewicht: spec.gewicht)
     }
 
+    /// De regelhoogte die het lettertype zelf al meebrengt. `lineSpacing` komt daar bovenop,
+    /// dus alleen het verschil met de gewenste regelhoogte telt.
+    var natuurlijkeRegelhoogte: CGFloat {
+        UIFont(name: fontNaam, size: spec.grootte)?.lineHeight ?? spec.grootte * 1.2
+    }
+
+    /// De grote titel schaalt tot en met accessibility2 mee. Daarboven passen lange woorden
+    /// ("Rookmelders") niet meer op één regel en breekt de tekst midden in een woord.
+    var grootsteMaat: DynamicTypeSize {
+        switch self {
+        case .titelGroot: .accessibility2
+        case .kop: .accessibility3
+        default: .accessibility5
+        }
+    }
+
     var grootte: CGFloat { spec.grootte }
     var regelhoogte: CGFloat { spec.regelhoogte }
     var relatiefAan: Font.TextStyle { spec.relatief }
@@ -68,7 +84,7 @@ private struct TekststijlModifier: ViewModifier {
 
     init(_ stijl: Tekststijl) {
         self.stijl = stijl
-        _extraRegelruimte = ScaledMetric(wrappedValue: max(stijl.regelhoogte - stijl.grootte, 0), relativeTo: stijl.relatiefAan)
+        _extraRegelruimte = ScaledMetric(wrappedValue: max(stijl.regelhoogte - stijl.natuurlijkeRegelhoogte, 0), relativeTo: stijl.relatiefAan)
         _spatie = ScaledMetric(wrappedValue: stijl.grootte * stijl.spatieEm, relativeTo: stijl.relatiefAan)
     }
 
@@ -77,6 +93,7 @@ private struct TekststijlModifier: ViewModifier {
             .font(stijl.font)
             .tracking(spatie)
             .lineSpacing(extraRegelruimte)
+            .dynamicTypeSize(...stijl.grootsteMaat)
     }
 }
 

@@ -22,6 +22,7 @@ struct UitvoeringScherm: View {
     @State private var notitie: String
     @State private var fotos: [FotoItem]
     @State private var gekozenFotos: [PhotosPickerItem] = []
+    @State private var fotoFout: String?
     @State private var verwijderen = false
 
     init(uitvoering: Uitvoering) {
@@ -70,6 +71,9 @@ struct UitvoeringScherm: View {
                 PhotosPicker(selection: $gekozenFotos, maxSelectionCount: 5, matching: .images) {
                     Text("Foto toevoegen").knopOpmaak(.secundair)
                 }
+            if let fotoFout {
+                Text(fotoFout).tekststijl(.klein).foregroundStyle(Color.ink)
+            }
 
                 Button("Opslaan") { bewaar() }
                     .buttonStyle(.primair)
@@ -101,11 +105,9 @@ struct UitvoeringScherm: View {
     private func laadFotos(_ items: [PhotosPickerItem]) {
         guard !items.isEmpty else { return }
         Task {
-            for item in items {
-                if let data = try? await item.loadTransferable(type: Data.self), let verkleind = Fotoverkleiner.verklein(data) {
-                    fotos.append(FotoItem(bijlage: nil, data: verkleind))
-                }
-            }
+            let resultaat = await Fotoverkleiner.laad(items)
+            fotos.append(contentsOf: resultaat.fotos.map { FotoItem(bijlage: nil, data: $0) })
+            fotoFout = Fotoverkleiner.foutTekst(mislukt: resultaat.mislukt)
             gekozenFotos = []
         }
     }
