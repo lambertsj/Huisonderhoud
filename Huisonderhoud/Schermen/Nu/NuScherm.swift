@@ -63,8 +63,15 @@ struct NuScherm: View {
         #if DEBUG
         .task {
             // Voor screenshots: `-open-eerste-waarschuwing` opent de eerste taak met een waarschuwing.
-            guard CommandLine.arguments.contains("-open-eerste-waarschuwing") else { return }
-            if let taak = taken.first(where: { $0.eigenWaarschuwing != nil }) { pad.append(taak) }
+            // `-open-taak <catalogus-id>` opent die taak.
+            let args = CommandLine.arguments
+            if let i = args.firstIndex(of: "-open-taak"), i + 1 < args.count,
+               let taak = taken.first(where: { $0.catalogusID == args[i + 1] }) {
+                pad.append(taak)
+            } else if args.contains("-open-eerste-waarschuwing"),
+                      let taak = taken.first(where: { $0.eigenWaarschuwing != nil }) {
+                pad.append(taak)
+            }
         }
         #endif
     }

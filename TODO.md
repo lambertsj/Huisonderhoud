@@ -6,8 +6,8 @@ Wat Jeroen nog moet invullen of kiezen. Dit is geen backlog voor de app: de app 
 
 - [ ] **Team** instellen (`DEVELOPMENT_TEAM` in `project.yml`, nu leeg).
 - [ ] **Bundle-id** bevestigen. Nu de placeholder `nl.basisapps.huisonderhoud` (en `.tests`).
-- [ ] **App-icoon** maken en in `Huisonderhoud/Resources/Assets.xcassets/AppIcon.appiconset` zetten (1024 x 1024). Nu leeg.
-- [ ] **App Store-gegevens**: naam, subtitel, beschrijving, trefwoorden, screenshots, leeftijdsclassificatie, supportlink.
+- [x] **App-icoon**: een voorstel staat erin (de Stempel met vinkje, drie kleuren). Zie `AppStore/README.md`; vervang het als je iets anders wilt.
+- [ ] **App Store-gegevens** (screenshots staan al in `AppStore/screenshots-6.9/`): naam, subtitel, beschrijving, trefwoorden, screenshots, leeftijdsclassificatie, supportlink.
 - [ ] **Privacylabel** in App Store Connect: "Gegevens niet verzameld". Past bij `PrivacyInfo.xcprivacy` en `PRIVACY.md`.
 - [ ] **Privacy-URL** (bijvoorbeeld de gerenderde `PRIVACY.md` op GitHub of basisapps.nl).
 - [ ] **iPad**: de app is nu alleen voor iPhone (`TARGETED_DEVICE_FAMILY: "1"`). Zet op `"1,2"` als je iPad wilt en test de indelingen.

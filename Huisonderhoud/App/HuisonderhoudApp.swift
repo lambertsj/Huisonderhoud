@@ -33,6 +33,9 @@ struct HuisonderhoudApp: App {
         if CommandLine.arguments.contains("-voorbeelddata") {
             return MainActor.assumeIsolated { Voorbeeld.container(nu: Date()) }
         }
+        if CommandLine.arguments.contains("-screenshotdata") {
+            return MainActor.assumeIsolated { Voorbeeld.screenshotContainer() }
+        }
         if CommandLine.arguments.contains("-leeg") {
             return MainActor.assumeIsolated { Voorbeeld.container(metSchema: false) }
         }

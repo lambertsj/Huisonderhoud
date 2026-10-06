@@ -1,853 +1,783 @@
 {
-  "sourceLanguage": "nl",
-  "strings": {
-    "%@ kiezen": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@ kiezen"
+  "sourceLanguage" : "nl",
+  "strings" : {
+    "" : {
+
+    },
+    "%@ kiezen" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ kiezen"
           }
         }
       }
     },
-    "%@ wissen": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@ wissen"
+    "%@ wissen" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ wissen"
           }
         }
       }
     },
-    "%@, %@": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@, %@"
+    "%@, %@" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %@"
           }
         }
       }
     },
-    "%lld van %lld onderdelen bestaan al. Overschrijven vervangt ze door de versie uit het bestand. Overslaan laat ze zoals ze zijn.": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld van %lld onderdelen bestaan al. Overschrijven vervangt ze door de versie uit het bestand. Overslaan laat ze zoals ze zijn."
+    "%lld van %lld onderdelen bestaan al. Overschrijven vervangt ze door de versie uit het bestand. Overslaan laat ze zoals ze zijn." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld van %lld onderdelen bestaan al. Overschrijven vervangt ze door de versie uit het bestand. Overslaan laat ze zoals ze zijn."
           }
         }
       }
     },
-    "AFGEVINKT": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "AFGEVINKT"
+    "aan" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "aan"
           }
         }
       }
     },
-    "Aanvinken om uit te zetten": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aanvinken om uit te zetten"
+    "Aanvinken om uit te zetten" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aanvinken om uit te zetten"
           }
         }
       }
     },
-    "Afgevinkt op %@, door %@": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Afgevinkt op %@, door %@"
+    "AFGEVINKT" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AFGEVINKT"
           }
         }
       }
     },
-    "Afvinken": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Afvinken"
+    "Afgevinkt op %@, door %@" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afgevinkt op %@, door %@"
           }
         }
       }
     },
-    "Annuleren": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Annuleren"
+    "Afvinken" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afvinken"
           }
         }
       }
     },
-    "Apparaat toevoegen": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apparaat toevoegen"
+    "Annuleren" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuleren"
           }
         }
       }
     },
-    "Datum": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Datum"
+    "Apparaat toevoegen" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apparaat toevoegen"
           }
         }
       }
     },
-    "Datum kiezen": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Datum kiezen"
+    "Datum" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datum"
           }
         }
       }
     },
-    "Datum kiezen voor %@": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Datum kiezen voor %@"
+    "Datum kiezen" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datum kiezen"
           }
         }
       }
     },
-    "De gegevens en foto's van dit apparaat verdwijnen. Taken en het Boekje blijven bestaan.": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "De gegevens en foto's van dit apparaat verdwijnen. Taken en het Boekje blijven bestaan."
+    "Datum kiezen voor %@" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datum kiezen voor %@"
           }
         }
       }
     },
-    "De stempel en de foto's verdwijnen uit het Boekje. Dit kan niet ongedaan worden gemaakt.": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "De stempel en de foto's verdwijnen uit het Boekje. Dit kan niet ongedaan worden gemaakt."
+    "De gegevens en foto's van dit apparaat verdwijnen. Taken en het Boekje blijven bestaan." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De gegevens en foto's van dit apparaat verdwijnen. Taken en het Boekje blijven bestaan."
           }
         }
       }
     },
-    "Deze klus uit het Boekje verwijderen?": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Deze klus uit het Boekje verwijderen?"
+    "De stempel en de foto's verdwijnen uit het Boekje. Dit kan niet ongedaan worden gemaakt." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De stempel en de foto's verdwijnen uit het Boekje. Dit kan niet ongedaan worden gemaakt."
           }
         }
       }
     },
-    "Deze taak staat uit. Je krijgt er geen herinnering voor.": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Deze taak staat uit. Je krijgt er geen herinnering voor."
+    "Deze klus uit het Boekje verwijderen?" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deze klus uit het Boekje verwijderen?"
           }
         }
       }
     },
-    "Deze taak verwijderen?": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Deze taak verwijderen?"
+    "Deze taak staat uit. Je krijgt er geen herinnering voor." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deze taak staat uit. Je krijgt er geen herinnering voor."
           }
         }
       }
     },
-    "Dinsdag 6 oktober": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dinsdag 6 oktober"
+    "Deze taak verwijderen?" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deze taak verwijderen?"
           }
         }
       }
     },
-    "Dit apparaat verwijderen?": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dit apparaat verwijderen?"
+    "Dinsdag 6 oktober" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dinsdag 6 oktober"
           }
         }
       }
     },
-    "Dossier als pdf bewaren": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dossier als pdf bewaren"
+    "Dit apparaat verwijderen?" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dit apparaat verwijderen?"
           }
         }
       }
     },
-    "Een deel van dit bestand staat al in je app": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Een deel van dit bestand staat al in je app"
+    "Dossier als pdf bewaren" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dossier als pdf bewaren"
           }
         }
       }
     },
-    "Een kenmerk aan- of uitzetten verandert je schema niet vanzelf. De app stelt het voor en jij kiest.": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Een kenmerk aan- of uitzetten verandert je schema niet vanzelf. De app stelt het voor en jij kiest."
+    "Een deel van dit bestand staat al in je app" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een deel van dit bestand staat al in je app"
           }
         }
       }
     },
-    "Er staan nog geen taken in je schema. Voeg een eigen taak toe.": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Er staan nog geen taken in je schema. Voeg een eigen taak toe."
+    "Een kenmerk aan- of uitzetten verandert je schema niet vanzelf. De app stelt het voor en jij kiest." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een kenmerk aan- of uitzetten verandert je schema niet vanzelf. De app stelt het voor en jij kiest."
           }
         }
       }
     },
-    "Foto %lld": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Foto %lld"
+    "Er staan nog geen taken in je schema. Voeg een eigen taak toe." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er staan nog geen taken in je schema. Voeg een eigen taak toe."
           }
         }
       }
     },
-    "Foto %lld verwijderen": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Foto %lld verwijderen"
+    "Foto %lld" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto %lld"
           }
         }
       }
     },
-    "Foto toevoegen": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Foto toevoegen"
+    "Foto %lld verwijderen" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto %lld verwijderen"
           }
         }
       }
     },
-    "Foto van het typeplaatje toevoegen": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Foto van het typeplaatje toevoegen"
+    "Foto toevoegen" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto toevoegen"
           }
         }
       }
     },
-    "Geen taken gevonden voor “%@”.": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Geen taken gevonden voor “%@”."
+    "Foto van het typeplaatje toevoegen" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto van het typeplaatje toevoegen"
           }
         }
       }
     },
-    "Gegevens exporteren": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gegevens exporteren"
+    "Geen taken gevonden voor “%@”." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen taken gevonden voor “%@”."
           }
         }
       }
     },
-    "Gegevens importeren": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gegevens importeren"
+    "Gegevens exporteren" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gegevens exporteren"
           }
         }
       }
     },
-    "Herinnering aanzetten": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Herinnering aanzetten"
+    "Gegevens importeren" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gegevens importeren"
           }
         }
       }
     },
-    "Herinnering als een klus aan de beurt is": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Herinnering als een klus aan de beurt is"
+    "Herinnering aanzetten" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Herinnering aanzetten"
           }
         }
       }
     },
-    "Herinnering uitzetten": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Herinnering uitzetten"
+    "Herinnering als een klus aan de beurt is" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Herinnering als een klus aan de beurt is"
           }
         }
       }
     },
-    "Herinneringen aanzetten": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Herinneringen aanzetten"
+    "Herinnering uitzetten" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Herinnering uitzetten"
           }
         }
       }
     },
-    "Huisonderhoud gegevens": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Huisonderhoud gegevens"
+    "Herinneringen aanzetten" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Herinneringen aanzetten"
           }
         }
       }
     },
-    "Huisonderhoud is een BasisApp: een gratis, open Nederlandse app. Dit zijn de afspraken.": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Huisonderhoud is een BasisApp: een gratis, open Nederlandse app. Dit zijn de afspraken."
+    "Huisonderhoud gegevens" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huisonderhoud gegevens"
           }
         }
       }
     },
-    "Instellingen openen": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Instellingen openen"
+    "Huisonderhoud is een BasisApp: een gratis, open Nederlandse app. Dit zijn de afspraken." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huisonderhoud is een BasisApp: een gratis, open Nederlandse app. Dit zijn de afspraken."
           }
         }
       }
     },
-    "Je gegevens staan alleen op je telefoon. Met een export bewaar je ze zelf, bijvoorbeeld in Bestanden, of neem je ze mee naar een nieuwe telefoon.": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Je gegevens staan alleen op je telefoon. Met een export bewaar je ze zelf, bijvoorbeeld in Bestanden, of neem je ze mee naar een nieuwe telefoon."
+    "Instellingen openen" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instellingen openen"
           }
         }
       }
     },
-    "Keuze opslaan": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Keuze opslaan"
+    "Je gegevens staan alleen op je telefoon. Met een export bewaar je ze zelf, bijvoorbeeld in Bestanden, of neem je ze mee naar een nieuwe telefoon." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je gegevens staan alleen op je telefoon. Met een export bewaar je ze zelf, bijvoorbeeld in Bestanden, of neem je ze mee naar een nieuwe telefoon."
           }
         }
       }
     },
-    "Laatste keer: %@": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Laatste keer: %@"
+    "Keuze opslaan" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keuze opslaan"
           }
         }
       }
     },
-    "Meer": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Meer"
+    "Laatste keer: %@" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laatste keer: %@"
           }
         }
       }
     },
-    "Meer acties voor deze taak": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Meer acties voor deze taak"
+    "Meer" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meer"
           }
         }
       }
     },
-    "Meldingen staan voor Huisonderhoud uit in Instellingen. Zet ze daar aan om herinneringen te krijgen.": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Meldingen staan voor Huisonderhoud uit in Instellingen. Zet ze daar aan om herinneringen te krijgen."
+    "Meer acties voor deze taak" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meer acties voor deze taak"
           }
         }
       }
     },
-    "Niet aangevinkte taken komen uitgezet in je schema te staan, zodat je ze later kunt aanzetten.": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Niet aangevinkte taken komen uitgezet in je schema te staan, zodat je ze later kunt aanzetten."
+    "Meldingen staan voor Huisonderhoud uit in Instellingen. Zet ze daar aan om herinneringen te krijgen." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meldingen staan voor Huisonderhoud uit in Instellingen. Zet ze daar aan om herinneringen te krijgen."
           }
         }
       }
     },
-    "Niet ingevuld": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Niet ingevuld"
+    "Niet aangevinkte taken komen uitgezet in je schema te staan, zodat je ze later kunt aanzetten." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niet aangevinkte taken komen uitgezet in je schema te staan, zodat je ze later kunt aanzetten."
           }
         }
       }
     },
-    "Niets aan de beurt. Je huis is bij.": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Niets aan de beurt. Je huis is bij."
+    "Niet ingevuld" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niet ingevuld"
           }
         }
       }
     },
-    "Niets meer te kiezen. Je schema is bij.": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Niets meer te kiezen. Je schema is bij."
+    "Niets aan de beurt. Je huis is bij." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niets aan de beurt. Je huis is bij."
           }
         }
       }
     },
-    "Nog geen apparaten. Voeg bijvoorbeeld je cv-ketel toe, met merk, serienummer en een foto van het typeplaatje.": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nog geen apparaten. Voeg bijvoorbeeld je cv-ketel toe, met merk, serienummer en een foto van het typeplaatje."
+    "Niets meer te kiezen. Je schema is bij." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niets meer te kiezen. Je schema is bij."
           }
         }
       }
     },
-    "Nog niets afgevinkt. Vink een klus af en hier verschijnt je eerste stempel.": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nog niets afgevinkt. Vink een klus af en hier verschijnt je eerste stempel."
+    "Nog geen apparaten. Voeg bijvoorbeeld je cv-ketel toe, met merk, serienummer en een foto van het typeplaatje." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nog geen apparaten. Voeg bijvoorbeeld je cv-ketel toe, met merk, serienummer en een foto van het typeplaatje."
           }
         }
       }
     },
-    "Notitie toevoegen": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Notitie toevoegen"
+    "Nog niets afgevinkt. Vink een klus af en hier verschijnt je eerste stempel." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nog niets afgevinkt. Vink een klus af en hier verschijnt je eerste stempel."
           }
         }
       }
     },
-    "Nu aan de beurt": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nu aan de beurt"
+    "Notitie toevoegen" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notitie toevoegen"
           }
         }
       }
     },
-    "Nu niet": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nu niet"
+    "Nu aan de beurt" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nu aan de beurt"
           }
         }
       }
     },
-    "Om 9 uur op de dag zelf. Geen teller op het pictogram.": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Om 9 uur op de dag zelf. Geen teller op het pictogram."
+    "Nu niet" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nu niet"
           }
         }
       }
     },
-    "Onderhoudsdossier": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Onderhoudsdossier"
+    "Om 9 uur op de dag zelf. Geen teller op het pictogram." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Om 9 uur op de dag zelf. Geen teller op het pictogram."
           }
         }
       }
     },
-    "Opent in de browser": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Opent in de browser"
+    "Onderhoudsdossier" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onderhoudsdossier"
           }
         }
       }
     },
-    "Opslaan": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Opslaan"
+    "Opent in de browser" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opent in de browser"
           }
         }
       }
     },
-    "Overschrijven": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Overschrijven"
+    "Opslaan" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opslaan"
           }
         }
       }
     },
-    "Overslaan": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Overslaan"
+    "Overschrijven" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overschrijven"
           }
         }
       }
     },
-    "Schema maken": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Schema maken"
+    "Overslaan" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overslaan"
           }
         }
       }
     },
-    "Taak aanzetten": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Taak aanzetten"
+    "Schema maken" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schema maken"
           }
         }
       }
     },
-    "Taak bewerken": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Taak bewerken"
+    "Taak aanzetten" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taak aanzetten"
           }
         }
       }
     },
-    "Taak toevoegen": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Taak toevoegen"
+    "Taak bewerken" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taak bewerken"
           }
         }
       }
     },
-    "Taak uitzetten": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Taak uitzetten"
+    "Taak toevoegen" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taak toevoegen"
           }
         }
       }
     },
-    "Taak verwijderen": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Taak verwijderen"
+    "Taak uitzetten" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taak uitzetten"
           }
         }
       }
     },
-    "Tabbalk": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tabbalk"
+    "Taak verwijderen" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taak verwijderen"
           }
         }
       }
     },
-    "Te laat": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Te laat"
+    "Tabbalk" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tabbalk"
           }
         }
       }
     },
-    "Verwijderen": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Verwijderen"
+    "Te laat" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Te laat"
           }
         }
       }
     },
-    "Vorige keer": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vorige keer"
+    "uit" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "uit"
           }
         }
       }
     },
-    "Wat je er al mee hebt afgevinkt blijft in het Boekje staan.": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Wat je er al mee hebt afgevinkt blijft in het Boekje staan."
+    "Verwijderen" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwijderen"
           }
         }
       }
     },
-    "Weet ik niet": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Weet ik niet"
+    "Vorige keer" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vorige keer"
           }
         }
       }
     },
-    "Wissen": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Wissen"
+    "Wat je er al mee hebt afgevinkt blijft in het Boekje staan." : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wat je er al mee hebt afgevinkt blijft in het Boekje staan."
           }
         }
       }
     },
-    "Zoeken": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Zoeken"
+    "Weet ik niet" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weet ik niet"
           }
         }
       }
     },
-    "Zoeken in taken": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Zoeken in taken"
+    "Wissen" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wissen"
           }
         }
       }
     },
-    "Zoekopdracht wissen": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Zoekopdracht wissen"
+    "Zoeken" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zoeken"
           }
         }
       }
     },
-    "aan": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "aan"
+    "Zoeken in taken" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zoeken in taken"
           }
         }
       }
     },
-    "uit": {
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "uit"
+    "Zoekopdracht wissen" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zoekopdracht wissen"
           }
         }
       }
     }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }
