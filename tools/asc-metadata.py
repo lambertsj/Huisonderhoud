@@ -64,13 +64,20 @@ except SystemExit:
     rd = None
 if rd and rd["attributes"].get("notes") == m["beoordelingsnotities"]:
     pass  # staat er al; de contactgegevens vul je zelf in (naam, telefoon, e-mail)
-elif rd:
-    asc.patch(f"/v1/appStoreReviewDetails/{rd['id']}", {"data": {"type": "appStoreReviewDetails", "id": rd["id"],
-              "attributes": {"demoAccountRequired": False, "notes": m["beoordelingsnotities"]}}})
 else:
-    asc.post("/v1/appStoreReviewDetails", {"data": {"type": "appStoreReviewDetails",
-             "attributes": {"demoAccountRequired": False, "notes": m["beoordelingsnotities"]},
-             "relationships": {"appStoreVersion": {"data": {"type": "appStoreVersions", "id": vid}}}}})
+    # PATCH eist alle contactvelden; zonder contactgegevens maken we het record opnieuw aan.
+    if rd:
+        contact = {k: v for k, v in rd["attributes"].items() if k.startswith("contact") and v}
+        if len(contact) == 4:
+            asc.patch(f"/v1/appStoreReviewDetails/{rd['id']}", {"data": {"type": "appStoreReviewDetails", "id": rd["id"],
+                      "attributes": {"notes": m["beoordelingsnotities"]}}})
+            rd = "bijgewerkt"
+        else:
+            asc.delete(f"/v1/appStoreReviewDetails/{rd['id']}")
+    if rd != "bijgewerkt":
+        asc.post("/v1/appStoreReviewDetails", {"data": {"type": "appStoreReviewDetails",
+                 "attributes": {"demoAccountRequired": False, "notes": m["beoordelingsnotities"]},
+                 "relationships": {"appStoreVersion": {"data": {"type": "appStoreVersions", "id": vid}}}}})
 print("beoordelaarsnotities gezet")
 
 # Screenshots (iPhone 6,9 inch (API-type APP_IPHONE_67), 1320 x 2868), in de volgorde van de bestandsnamen
