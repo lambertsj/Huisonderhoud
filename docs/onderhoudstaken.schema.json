@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lambertsj/Huisonderhoud/docs/onderhoudstaken.schema.json",
+  "title": "Huisonderhoud: onderhoudstaken",
+  "description": "Schema van onderhoudstaken.json, de gebundelde, read-only catalogus van de app.",
+  "type": "object",
+  "required": ["meta", "taken"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["versie"],
+      "properties": {
+        "versie": { "type": "string", "minLength": 1 }
+      }
+    },
+    "taken": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/taak" }
+    }
+  },
+  "$defs": {
+    "taak": {
+      "type": "object",
+      "required": ["id", "titel", "categorie", "interval_maanden", "maanden", "uitvoering", "duur_min", "voorwaarde", "uitleg"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "Stabiele id. Verander hem nooit na release." },
+        "titel": { "type": "string", "minLength": 1 },
+        "categorie": {
+          "type": "string",
+          "enum": ["Veiligheid", "Verwarming", "Water", "Dak en gevel", "Ramen en deuren", "Ventilatie", "Vocht", "Badkamer en keuken", "Apparaten", "Energie", "Tuin", "Seizoen"]
+        },
+        "interval_maanden": { "type": ["integer", "null"], "minimum": 1, "description": "null = komt niet vanzelf terug." },
+        "maanden": { "type": "array", "items": { "type": "integer", "minimum": 1, "maximum": 12 }, "uniqueItems": true },
+        "uitvoering": { "type": "string", "enum": ["zelf", "vakman", "zelf_of_vakman"] },
+        "duur_min": { "type": ["integer", "null"], "minimum": 1 },
+        "voorwaarde": {
+          "type": "array",
+          "uniqueItems": true,
+          "description": "Any-of. Leeg = voor elk huis.",
+          "items": {
+            "type": "string",
+            "enum": ["gas", "houtkachel", "open_haard", "cv_ketel", "radiatoren", "warmtepomp", "boiler", "buitenkraan", "regenton", "schuin_dak", "plat_dak", "houten_kozijnen", "dakraam", "rolluiken", "mechanische_ventilatie", "wtw", "afzuigkap", "kruipruimte", "droger", "zonnepanelen", "airco", "tuin"]
+          }
+        },
+        "uitleg": { "type": "string", "minLength": 1 },
+        "waarschuwing": { "type": "string", "minLength": 1, "description": "Optioneel. Alleen voor veiligheid (gas, elektra, hoogte, vocht)." }
+      }
+    }
+  }
+}
