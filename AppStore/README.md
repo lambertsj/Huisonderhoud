@@ -23,3 +23,15 @@ swiftc -O tools/maak-screenshots.swift -o /tmp/maak-screenshots
 ```
 
 De voorbeelddata (Huis aan de Dijk, een gevuld Boekje) zit alleen in DEBUG-builds (`Voorbeeld.screenshotContainer`) en komt niet in de app voor gebruikers.
+
+## App Store Connect
+
+`tools/asc-metadata.py` zet de teksten uit `metadata-nl.json`, de categorieën, de leeftijdsclassificatie, de inhoudsrechten en de screenshots in App Store Connect (zie het script voor het gebruik). `tools/asc.py` is de kleine API-helper. Een build maak je zo:
+
+```sh
+xcodebuild -project Huisonderhoud.xcodeproj -scheme Huisonderhoud -configuration Release -destination 'generic/platform=iOS' -archivePath H.xcarchive archive -allowProvisioningUpdates -authenticationKeyPath ~/.appstoreconnect/private_keys/AuthKey_<ID>.p8 -authenticationKeyID <ID> -authenticationKeyIssuerID <ISSUER>
+xcodebuild -exportArchive -archivePath H.xcarchive -exportPath export -exportOptionsPlist AppStore/ExportOptions.plist <dezelfde authenticatie-opties>
+xcrun altool --upload-app -f export/Huisonderhoud.ipa -t ios --apiKey <ID> --apiIssuer <ISSUER>
+```
+
+Sleutels staan nooit in de repository. Verhoog `CURRENT_PROJECT_VERSION` in `project.yml` voor elke nieuwe upload.

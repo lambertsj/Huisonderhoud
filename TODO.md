@@ -4,8 +4,8 @@ Wat Jeroen nog moet invullen of kiezen. Dit is geen backlog voor de app: de app 
 
 ## Voor de App Store
 
-- [ ] **Team** instellen (`DEVELOPMENT_TEAM` in `project.yml`, nu leeg).
-- [ ] **Bundle-id** bevestigen. Nu de placeholder `nl.basisapps.huisonderhoud` (en `.tests`).
+- [x] Team ingesteld (`XYLKXHWCCC`).
+- [x] Bundle-id `nl.basisapps.huisonderhoud` is geregistreerd en in gebruik.
 - [x] **App-icoon**: een voorstel staat erin (de Stempel met vinkje, drie kleuren). Zie `AppStore/README.md`; vervang het als je iets anders wilt.
 - [ ] **App Store-gegevens** (screenshots staan al in `AppStore/screenshots-6.9/`): naam, subtitel, beschrijving, trefwoorden, screenshots, leeftijdsclassificatie, supportlink.
 - [ ] **Privacylabel** in App Store Connect: "Gegevens niet verzameld". Past bij `PrivacyInfo.xcprivacy` en `PRIVACY.md`.
