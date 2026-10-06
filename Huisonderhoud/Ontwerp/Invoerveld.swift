@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// Invoerveld: `surfaceRaised`, rand `lineStrong`, hoek 10. Het label staat erboven in `taak`.
 struct Invoerveld: View {
@@ -6,6 +7,7 @@ struct Invoerveld: View {
     let placeholder: String
     @Binding var tekst: String
     var regels: ClosedRange<Int> = 1...1
+    var toetsenbord: UIKeyboardType = .default
 
     @FocusState private var focus: Bool
 
@@ -18,6 +20,7 @@ struct Invoerveld: View {
                 .lineLimit(regels)
                 .tekststijl(.body)
                 .foregroundStyle(Color.ink)
+                .keyboardType(toetsenbord)
                 .focused($focus)
                 .padding(Ruimte.m)
                 .frame(maxWidth: .infinity, minHeight: Ruimte.knopHoogte, alignment: .topLeading)
@@ -71,5 +74,39 @@ struct Keuzerij<Waarde: Hashable>: View {
             }
         }
         .accessibilityElement(children: .contain)
+    }
+}
+
+/// Een datum die ook leeg mag zijn: "Datum kiezen" of de gekozen datum met "Wissen".
+struct OptioneleDatum: View {
+    let label: String
+    @Binding var datum: Date?
+    var bereik: PartialRangeThrough<Date>?
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: Ruimte.s) {
+            Text(label)
+                .tekststijl(.taak)
+                .foregroundStyle(Color.ink)
+            HStack {
+                if let waarde = datum {
+                    DatePicker(label, selection: Binding(get: { waarde }, set: { datum = $0 }), displayedComponents: .date)
+                        .labelsHidden()
+                    Spacer(minLength: Ruimte.m)
+                    Button("Wissen") { datum = nil }
+                        .buttonStyle(.tekst)
+                        .accessibilityLabel("\(label) wissen")
+                } else {
+                    Text("Niet ingevuld")
+                        .tekststijl(.body)
+                        .foregroundStyle(Color.inkMuted)
+                    Spacer(minLength: Ruimte.m)
+                    Button("Datum kiezen") { datum = Date() }
+                        .buttonStyle(.tekst)
+                        .accessibilityLabel("\(label) kiezen")
+                }
+            }
+            .frame(minHeight: Ruimte.aanraakminimum)
+        }
     }
 }

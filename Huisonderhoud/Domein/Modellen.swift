@@ -16,6 +16,8 @@ final class Woning {
     var kenmerken: [String] = []
     var eigenaarSinds: Date?
     var catalogusVersie: String = ""
+    /// Catalogus-id's waarvoor de gebruiker een voorstel (toevoegen of uitzetten) heeft afgewezen.
+    var negeerVoorstellen: [String] = []
 
     @Relationship(deleteRule: .cascade, inverse: \Taak.woning) var taken: [Taak]? = []
     @Relationship(deleteRule: .cascade, inverse: \Apparaat.woning) var apparaten: [Apparaat]? = []
