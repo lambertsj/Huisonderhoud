@@ -20,6 +20,24 @@ enum Wanneertekst {
         }
     }
 
+    /// De statusregel: status heeft altijd een woord, kleur komt erbij.
+    static func statusregel(status: TaakStatus, wanneer: String) -> String {
+        switch status {
+        case .telaat: wanneer.isEmpty ? "Te laat" : "Te laat, \(wanneer)"
+        case .nu: wanneer.isEmpty ? "Deze maand" : "Deze maand, \(wanneer)"
+        case .later: wanneer.isEmpty ? "Later" : wanneer
+        case .gedaan: wanneer
+        }
+    }
+
+    /// "In november, zelf of vakman, 90 minuten"
+    static func taakregel(status: TaakStatus, wanneer: String, uitvoering: UitvoeringSoort, duurMin: Int?, heeftDatum: Bool) -> String {
+        var delen = [heeftDatum ? statusregel(status: status, wanneer: wanneer) : "Bij aanleiding"]
+        delen.append(uitvoering.label.lowercased())
+        if let duurMin { delen.append("\(duurMin) minuten") }
+        return delen.joined(separator: ", ")
+    }
+
     /// "Elke maand", "Elk half jaar", "Elk jaar" voor het Boekje.
     static func frequentie(intervalMaanden: Int?) -> String {
         guard let n = intervalMaanden, n > 0 else { return "Bij aanleiding" }

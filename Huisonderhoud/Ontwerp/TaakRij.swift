@@ -69,14 +69,8 @@ struct TaakRij: View {
         return delen.isEmpty ? nil : delen.joined(separator: ", ")
     }
 
-    /// Status heeft altijd een woord; kleur komt erbij.
     private var statusregel: String {
-        switch status {
-        case .telaat: wanneer.isEmpty ? "Te laat" : "Te laat, \(wanneer)"
-        case .nu: wanneer.isEmpty ? "Deze maand" : "Deze maand, \(wanneer)"
-        case .later: wanneer.isEmpty ? "Later" : wanneer
-        case .gedaan: wanneer
-        }
+        Wanneertekst.statusregel(status: status, wanneer: wanneer)
     }
 
     private var statuskleur: Color {

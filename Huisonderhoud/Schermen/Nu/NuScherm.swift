@@ -32,6 +32,7 @@ struct NuScherm: View {
 
     @Environment(Huisdienst.self) private var dienst
     @Environment(\.nu) private var nu
+    @State private var pad = NavigationPath()
 
     var body: some View {
         let tijd = nu()
@@ -40,7 +41,7 @@ struct NuScherm: View {
         let dezeMaand = perStatus[.nu] ?? []
         let later = perStatus[.later] ?? []
 
-        NavigationStack {
+        NavigationStack(path: $pad) {
             Scherm {
                 Schermkop(titel: "Nu aan de beurt",
                           subregel: Datumopmaak.dagMaand(tijd, kalender: dienst.planning.kalender))
@@ -57,6 +58,13 @@ struct NuScherm: View {
             .navigationDestination(for: Taak.self) { TaakDetailScherm(taak: $0) }
             .toolbar(.hidden, for: .navigationBar)
         }
+        #if DEBUG
+        .task {
+            // Voor screenshots: `-open-eerste-waarschuwing` opent de eerste taak met een waarschuwing.
+            guard CommandLine.arguments.contains("-open-eerste-waarschuwing") else { return }
+            if let taak = taken.first(where: { $0.eigenWaarschuwing != nil }) { pad.append(taak) }
+        }
+        #endif
     }
 
     @ViewBuilder private func groep(_ kop: String, _ taken: [Taak]) -> some View {
