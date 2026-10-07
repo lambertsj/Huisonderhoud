@@ -2,6 +2,8 @@
 
 # Huisonderhoud
 
+[![Basis Certified](https://basisapps.nl/badge.svg)](https://basisapps.nl)
+
 Weet altijd wat er aan je huis moet gebeuren, voordat het een probleem wordt.
 
 Huisonderhoud is een gratis, open iOS-app voor eigenaar-bewoners, vooral eerste kopers. Je vinkt aan wat bij je huis hoort (cv-ketel, plat dak, houten kozijnen, enzovoort) en krijgt automatisch een onderhoudsschema op maat. Elke afgevinkte klus komt met datum, uitvoerder, notitie en foto in een logboek, het Boekje. Dat kun je bewaren als pdf-onderhoudsdossier, bijvoorbeeld voor een verkoop.
